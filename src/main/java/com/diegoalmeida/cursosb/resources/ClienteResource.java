@@ -80,5 +80,12 @@ public class ClienteResource {
 		return ResponseEntity.ok().body(listDto);
 	}
 	
+	//http://localhost:8080/clientes/email?value=diegoangelo.almeida@gmail.com
+	@RequestMapping(value="/email", method=RequestMethod.GET)
+	public ResponseEntity<Cliente> find(@RequestParam(value="value") String email) {
+		Cliente obj = service.findByEmail(email);
+		return ResponseEntity.ok().body(obj);
+	}
+	
 
 }
