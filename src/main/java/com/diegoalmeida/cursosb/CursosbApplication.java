@@ -7,13 +7,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CursosbApplication implements CommandLineRunner {
 	
+	/*
+	 * @Autowired private S3Service s3Service;
+	 */
+
+	
 	public static void main(String[] args) {
 		SpringApplication.run(CursosbApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		
+		//s3Service.uploadFile("C:\\Estudo\\SpringBoot\\camisa.png");
 		
 	}
 
